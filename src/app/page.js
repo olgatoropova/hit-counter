@@ -1,5 +1,6 @@
 import React from 'react';
 
+import ObscureReveal from '../components/ObscureReveal';
 import { readFile, writeFile } from '../helpers/file-helpers';
 
 const DATABASE_PATH = '/src/database.json';
@@ -28,7 +29,9 @@ function Home() {
 	return (
 		<main>
 			<h1>Welcome!</h1>
-			<p>You are visitor number {data.hits}.</p>
+			<p>
+				You are visitor number <ObscureReveal>{data.hits}</ObscureReveal>.
+			</p>
 		</main>
 	);
 }
